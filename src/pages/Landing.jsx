@@ -14,7 +14,13 @@ const FadeUp = ({ children, delay = 0, className = '' }) => (
     {children}
   </motion.div>
 );
-
+function GitHubIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" width={15} height={15} aria-hidden="true" focusable="false">
+      <path d="M12 0C5.37 0 0 5.37 0 12c0 5.297 3.438 9.795 8.207 11.387.6.111.793-.261.793-.577 0-.285-.011-1.04-.017-2.042-3.338.725-4.042-1.609-4.042-1.609-.546-1.387-1.333-1.757-1.333-1.757-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.071 1.835 2.809 1.305 3.495.998.108-.776.419-1.305.762-1.605-2.665-.303-5.467-1.334-5.467-5.931 0-1.31.469-2.381 1.236-3.221-.124-.303-.536-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.503 11.503 0 0112 5.8c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.655 1.653.243 2.874.119 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.625-5.479 5.921.43.371.814 1.102.814 2.222 0 1.606-.014 2.898-.014 3.293 0 .319.192.694.801.576C20.565 21.795 24 17.297 24 12c0-6.63-5.373-12-12-12z" />
+    </svg>
+  );
+}
 export default function Landing() {
   const navigate = useNavigate();
   const [copied, setCopied] = useState(false);
@@ -143,6 +149,22 @@ export default function Landing() {
             >
               {copied ? <Check size={15} style={{ color: '#4ade80' }} /> : <Copy size={15} style={{ color: '#555' }} />}
               npm i apiwatch-sdk
+            </button>
+            <button
+              type="button"
+              aria-label="Open APIWatch SDK GitHub repository"
+              onClick={() => window.open('https://github.com/pavansharan007/apiwatch-sdk.git', '_blank', 'noopener,noreferrer')}
+              style={{
+                display: 'flex', alignItems: 'center', gap: 10,
+                padding: '13px 24px', borderRadius: 10, background: '#111',
+                border: '1px solid #222', color: '#aaa', fontSize: 14,
+                fontFamily: 'monospace', fontWeight: 400, cursor: 'pointer',
+              }}
+            >
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8, color: '#fff' }}>
+                <GitHubIcon />
+                GitHub
+              </span>
             </button>
           </div>
         </FadeUp>
