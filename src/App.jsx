@@ -5,6 +5,10 @@ import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
 import ProjectView from './pages/ProjectView';
 import Landing from './pages/Landing';
+import { Analytics } from '@vercel/analytics/react';
+
+<Analytics />
+
 function ProtectedRoute({ children }) {
   const token = localStorage.getItem('apiwatch_token');
   if (!token) return <Navigate to="/login" replace />;
