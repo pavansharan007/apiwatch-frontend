@@ -121,7 +121,7 @@ export default function Landing() {
 
         <FadeUp delay={0.2}>
           <p style={{ fontSize: 20, color: '#666', maxWidth: 560, lineHeight: 1.7, marginBottom: 40, fontWeight: 300 }}>
-            One line of code captures every request — streams real-time latency,
+            One line of code captures every request streams real-time latency,
             error rates and endpoint health to your dashboard automatically.
           </p>
         </FadeUp>
@@ -218,7 +218,7 @@ export default function Landing() {
                   {[
                     ['Real-time tracking', 'Every request streamed live to your dashboard.'],
                     ['Automated metrics', 'P95 latency and avg response times plotted instantly.'],
-                    ['Network effect', 'First dev sets it up — everyone shares the dashboard.'],
+                    ['Network effect', 'First dev sets it up everyone shares the dashboard.'],
                   ].map(([title, desc]) => (
                     <li key={title} style={{ display: 'flex', gap: 14, alignItems: 'flex-start' }}>
                       <div style={{ width: 8, height: 8, borderRadius: '50%', background: '#7c3aed', flexShrink: 0, marginTop: 5, boxShadow: '0 0 10px rgba(124,58,237,0.5)' }} />
@@ -272,15 +272,15 @@ export default function Landing() {
                 Best practices, generated for your codebase.
               </h2>
               <p style={{ fontSize: 16, color: '#666', lineHeight: 1.75, marginBottom: 40 }}>
-                Curated analytics, non-blocking ingestion, and an automatic event queue — fully transparent inside your Express app.
+                Curated analytics, non-blocking ingestion, and an automatic event queue fully transparent inside your Express app.
               </p>
             </FadeUp>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: 28 }}>
               {[
-                { icon: <Code2 size={15} />, title: 'Zero Dependency', desc: 'No agents. Just pure Node.js native `https` and `http` modules — keeps your bundle feather-light.' },
-                { icon: <Zap size={15} />, title: 'Background Queuing', desc: 'APIWatch intercepts responses silently and flushes metrics in the background — never blocks your critical path.' },
-                { icon: <LineChart size={15} />, title: 'Automatic Metric Math', desc: 'P95, averages, error rates, top endpoints — using native MongoDB aggregation pipelines in real-time.' },
+                { icon: <Code2 size={15} />, title: 'Zero Dependency', desc: 'No agents. Just pure Node.js native `https` and `http` modules keeps your bundle feather-light.' },
+                { icon: <Zap size={15} />, title: 'Background Queuing', desc: 'APIWatch intercepts responses silently and flushes metrics in the background never blocks your critical path.' },
+                { icon: <LineChart size={15} />, title: 'Automatic Metric Math', desc: 'P95, averages, error rates, top endpoints using native MongoDB aggregation pipelines in real-time.' },
               ].map(({ icon, title, desc }, i) => (
                 <FadeUp key={title} delay={0.1 * (i + 1)}>
                   <div style={{ display: 'flex', gap: 14, alignItems: 'flex-start' }}>
